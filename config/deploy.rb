@@ -1,5 +1,5 @@
 require "rvm/capistrano"
-require 'capistrano-unicorn'
+#require 'capistrano-unicorn'
 
 set :application, 'Popbot'
 set :repo_url, 'git@github.com:theethosapp/popbot.git'
@@ -19,6 +19,6 @@ set :scm, :git
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :keep_releases, 5
 
-set :rvm_ruby_string, :local
+set :bundle_dir, "/home/deploy/.rvm/gems/ruby-1.9.3-p484"
 
-after 'deploy:restart', 'unicorn:reload'    # app IS NOT preloaded
+#after 'deploy:restart', 'unicorn:reload'    # app IS NOT preloaded
