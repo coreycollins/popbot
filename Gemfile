@@ -6,7 +6,7 @@ gem 'mongoid', git: 'git://github.com/mongoid/mongoid.git'
 gem 'resque'
 gem 'resque-scheduler'
 gem 'twilio-ruby'
-gem 'debugger'
+gem 'unicorn'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -29,4 +29,4 @@ group :development do
 end
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
