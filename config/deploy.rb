@@ -19,6 +19,8 @@ set :scm, :git
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 set :keep_releases, 5
 
-set :bundle_dir, "/home/deploy/.rvm/gems/ruby-1.9.3-p484"
+set :rvm_ruby_version, '1.9.3-p484'
+set :default_env, { path: "~/.rvm/bin:$PATH" }
+#SSHKit.config.command_map[:rake] = "#{fetch(:default_env)[:rvm_bin_path]}/rvm ruby-#{fetch(:rvm_ruby_version)} do bundle exec rake"
 
 #after 'deploy:restart', 'unicorn:reload'    # app IS NOT preloaded
