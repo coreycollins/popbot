@@ -29,12 +29,8 @@ before_fork do |server, worker|
     end
   end
 
-  defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.connection.disconnect!
 end
 
 after_fork do |server, worker|
 # Here we are establishing the connection after forking worker
 # processes
-  defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.establish_connection
