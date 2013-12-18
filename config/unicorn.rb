@@ -34,3 +34,4 @@ end
 after_fork do |server, worker|
 # Here we are establishing the connection after forking worker
 # processes
+end
