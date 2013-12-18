@@ -62,7 +62,7 @@ development:
 
     # Ensure all times are UTC in the app side. (default: false)
     # use_utc: false
-development:
+production:
   # Configure available database sessions. (required)
   sessions:
     # Defines the default session. (required)
