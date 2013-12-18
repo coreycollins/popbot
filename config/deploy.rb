@@ -30,7 +30,7 @@ namespace :deploy do
   desc "Start unicorn"
   task :start do
     on roles(:web) do
-      execute "cd #{current_path} ; sudo bundle exec unicorn_rails -E production -c config/unicorn.rb -D"
+      execute "cd #{current_path} ; bundle exec unicorn_rails -E production -c config/unicorn.rb -D"
     end
   end
 

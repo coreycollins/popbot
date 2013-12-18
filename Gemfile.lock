@@ -61,6 +61,7 @@ GEM
     debugger-ruby_core_source (1.2.4)
     erubis (2.7.0)
     execjs (2.0.2)
+    god (0.13.3)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -179,6 +180,7 @@ DEPENDENCIES
   capistrano-rails
   capistrano-unicorn
   debugger
+  god
   jbuilder (~> 1.2)
   mongoid!
   rails (= 4.0.2)
