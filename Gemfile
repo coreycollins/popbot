@@ -7,6 +7,7 @@ gem 'resque'
 gem 'resque-scheduler'
 gem 'twilio-ruby'
 gem 'unicorn'
+gem 'uglifier'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
