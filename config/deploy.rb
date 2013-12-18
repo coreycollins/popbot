@@ -26,18 +26,18 @@ set :default_env, { path: "~/.rvm/bin:$PATH" }
 namespace :deploy do
 
   desc "Zero-downtime restart of Unicorn"
-  task :restart, :except => { :no_release => true } do
+  task :restart do
     run "cd #{current_path}; #{sudo} kill -s USR2 `cat tmp/pids/unicorn.pid`"
   end
 
   desc "Start unicorn"
-  task :start, :except => { :no_release => true } do
+  task :start do
     run "cd #{current_path} ; sudo bundle exec unicorn_rails -E production -c config/unicorn.rb -D"
   end
 
   desc "Stop unicorn"
-  task :stop, :except => { :no_release => true } do
+  task :stop do
     run "sudo kill -s QUIT `cat #{File.join(current_path,'tmp/pids/unicorn.pid')}`"
   end  
-  
+
 end
